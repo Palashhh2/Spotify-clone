@@ -1,0 +1,293 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background: black;
+  color: white;
+  overflow: hidden; /*  over flow property- it is used to make scroll bar , here we added hidden property because we dont want whole body to scroll we rather will keep scrolling on every elemnet seperately */
+}
+.main{
+         display: flex;
+         height: 100vh;
+         padding: 0.5rem;
+}
+.sidebar{
+         background-color: black;
+         width: 340px;
+         border-radius: 1rem;/*1rem=16px*/
+         margin-right: 0.5rem;
+}
+.nav{
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;/*flex me automatitcally sare element horizontal line me ajate hai islive flex direction ko column me karke opposite kardiya*/
+  justify-content: center;
+  height: 100px;
+  padding: 0.5rem 0.75rem; 
+}
+.nav-option{
+  line-height: 2.5rem;/* line height it is used for the spacing matlab ek line kisi particular div me kitni area cover karegi*/
+  opacity: 0.5;
+  padding:8px 10px ;
+}
+.nav-option:hover{
+  opacity: 1;/* we notice that in nav option only opacity of search changes and the opacity of home remains same so we fix opacity in the html page itself*/
+}
+.nav-option i{
+ font-size: 1.25rem;
+}
+.nav-option a{
+ font-size: 1rem;
+ margin-left: 1rem;
+}
+.library{
+  background-color: #121212;
+  border-radius:1rem ;
+  height:100% ;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+.box {
+background-color: #232322;
+margin:0.75rem 0 0.75rem 0 ;
+padding: 0.75rem 1rem;
+height: 8rem;
+border-radius: 0.75rem;
+}
+.box-p1{
+font-size: 1rem;
+font-weight: 500;
+}
+.box-p2{
+font-size: 1rem;
+opacity: 0.9;
+}
+.badge{
+  border-radius: 8rem;
+  background-color: white;
+  padding: 0.25rem 1rem;
+  border: none;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  height: 2rem;
+  width: fit-content;
+}
+.options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.icons{
+  font-size: 1.2rem;
+  display: flex;
+ 
+
+}
+.icons i{
+  opacity: 0.5;
+  margin-right: 1rem;
+}
+.icons i:hover{
+  opacity: 1;
+}
+.content{
+         background-color: #121212;
+         flex: 1; /* iska matlab hai sabko jitni jagha chahiye dedo magr baki pori bachi hui jagha mujhe dedo*/
+         border-radius: 1rem;
+         overflow: auto;/*jab zruri tabh hi scroll bar aeyga*/
+         padding:0 1.5rem 0 1.5rem ;
+}
+.sticky-nav{
+  position: sticky;
+  top: 0;
+  background-color:#121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0 0.8rem 0;
+  z-index: 10;
+}
+
+.nav-icons{
+ margin-left: 0.7rem;
+}
+
+.sticky-nav-options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+.dark-badge{
+  background-color: black;
+  color: white;
+}
+@media (max-width: 1000px){
+  .hide{
+    display: none;
+  }
+}
+.card{
+  background-color: #232322;
+   width:150px; 
+   border-radius: 0.5rem;
+   padding:1rem ;
+   margin-left: 1.5rem;
+   margin-top: 1rem;
+}
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-img{
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.card-title{
+ font-weight: 600;
+}
+.card-info{
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+.footer{
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line{
+  width: 90%;
+  height: 50%;
+  border-top: 1px solid white;
+  opacity: 0.3;
+
+}
+
+.music-player{
+         background-color: black;
+         position:fixed ;
+         bottom: 0px;
+         width: 100%;
+         height: 70px;
+
+}
+
+a{
+  text-decoration: none;
+  color: white;
+
+} 
+
+.music-player{
+ display: flex;
+ /* justify-content: space-between; */
+ align-items: center;
+}
+
+.album{
+  width: 25%;
+}
+
+.player{
+  width: 50%;
+}
+
+.controls{
+  width:25%;
+}
+
+.player-controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-control-icon{
+  height: 1rem;
+  margin-right: 1.75rem;
+  opacity: 0.6;
+}
+.player-control-icon:hover{
+  opacity: 1;
+}
+.playback-bar{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.progress-bar{
+  width: 70%;
+  appearance:none ;
+  background-color: transparent;
+  cursor: pointer;
+}
+/*to work on slider go on the website quriksmode.com*/
+.progress-bar::-webkit-slider-runnable-track{
+background-color: #ddd;
+border-radius: 100px;
+height: 0.22rem;
+}
+.progress-bar::-webkit-slider-thumb{
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  background-color: rgb(41, 251, 41);
+  border-radius: 50%;
+  margin-top: -6px;
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.album-img {
+  height: 50px;
+}
+
+.song-name {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  margin-left: 1rem;
+}
+
+.song-icons {
+  margin-left: 2rem;
+}
+
+.song-icons .icon-1 {
+  height: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.song-icons .icon-2 {
+  height: 1.8rem;
+  margin-left: 0.75rem;
+}
+
+.song-p1 {
+  font-size: 16px;
+  margin: 16px 0 0 0;
+}
+
+.song-p2 {
+  font-size: 13px;
+  opacity: 0.5;
+  margin: 8px 0 13px 0;
+}
+.control{
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+}
+.icon1{
+  height: 2.3rem;
+  width: 2rem;
+}
